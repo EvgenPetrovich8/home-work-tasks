@@ -30,7 +30,7 @@ public class FormulasTestTask {
         double x = 27;
         double expectedResult = 169.547106790819;
         assertEquals(formulas.calculate11Formula(x), expectedResult);
-        // не совпадают десятые доли,доработаю позже
+
     }
 
     @Test
