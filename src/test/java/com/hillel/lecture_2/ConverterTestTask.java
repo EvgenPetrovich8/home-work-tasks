@@ -28,7 +28,7 @@ public class ConverterTestTask {
 
     @Test
     public void celsiusToKelvinTest() {
-        double expectedResult = 283.16;
+        double expectedResult = 283.15;
         assertEquals(temperatureConverter.celsiusToKelvin(10), expectedResult);
     }
 
@@ -64,18 +64,21 @@ public class ConverterTestTask {
 
     @Test
     public void poundsToKilogramsTest() {
-        double expectedResult = 11.339925610087997;
+
+        double expectedResult = 11.339925610087994;
         assertEquals(weightConverter.poundsToKilograms(25), expectedResult);
     }
 
     @Test
     public void speedKmToMiTest() {
+
         double expectedResult = 6.2139999999999995;
         assertEquals(speedConverter.speedKmToMi(10), expectedResult);
     }
 
     @Test
     public void speedMiToKmTest() {
+
         double expectedResult = 16.0926939169617;
         assertEquals(speedConverter.speedMiToKm(10), expectedResult);
     }
