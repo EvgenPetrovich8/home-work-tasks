@@ -33,14 +33,14 @@ public class FormulasTestTask {
         // не совпадают десятые доли,доработаю позже
     }
 
-    /*@Test
+    @Test
     public void formula12Test() {
         double x = 28;
         double expectedResult = 1.3351102609440046;
         assertEquals(formulas.calculate12Formula(x), expectedResult);
         // не совпадают очень мелкие доли,доработаю позже
     }
-*/
+
   /*  @Test
     public void formula13Test() {
         double x = 29;

@@ -32,14 +32,14 @@ public class Formulas {
 //        TODO implement formula 11
         return result11;
     }
-/*
+
     @Step
     public double calculate12Formula(double x) {
-        double result12 = Math.log(Math.sqrt(Math.abs(2-x))+1.2)*1/2+Math.pow(Math.E,-x)+Math.cbrt(2/x);
+        double result12 = Math.log(Math.sqrt(Math.abs(2-x))+1.2D)*1D/(2D+Math.pow(Math.E,-x))+Math.cbrt(2/x);
 //        TODO implement formula 12
         return result12;
     }
-
+/*
     @Step
     public double calculate13Formula(double x) {
         double result = 0.0;
