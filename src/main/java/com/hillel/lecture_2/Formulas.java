@@ -26,13 +26,13 @@ public class Formulas {
         return result10;
     }
 
-  /*  @Step
+    @Step
     public double calculate11Formula(double x) {
-        double result11 = 2*Math.PI*x-Math.abs(Math.sin(Math.sqrt(10.5*x)))*(1/(Math.cbrt(Math.pow(x,2))))+(1d/7d);
+        double result11 = (2D*Math.PI*x)-Math.abs(Math.sin(Math.sqrt(10.5D*x)))*1D/((Math.cbrt(Math.pow(x,2))+1D/7D));
 //        TODO implement formula 11
         return result11;
     }
-
+/*
     @Step
     public double calculate12Formula(double x) {
         double result12 = Math.log(Math.sqrt(Math.abs(2-x))+1.2)*1/2+Math.pow(Math.E,-x)+Math.cbrt(2/x);

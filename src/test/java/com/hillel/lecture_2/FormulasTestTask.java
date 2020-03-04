@@ -25,7 +25,7 @@ public class FormulasTestTask {
         assertEquals(formulas.calculate10Formula(x), expectedResult);
     }
 
-   /* @Test
+   @Test
     public void formula11Test() {
         double x = 27;
         double expectedResult = 169.547106790819;
