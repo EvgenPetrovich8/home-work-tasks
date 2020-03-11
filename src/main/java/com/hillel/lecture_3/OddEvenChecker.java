@@ -10,8 +10,23 @@ public class OddEvenChecker {
     @Step
     public String checkNumber(int number) {
 
+
+
 //        TODO implements result
-        String result = "";
+        String result;
+
+
+        if (number%2==0&&number!=0){
+            result ="Even Number";
+        }
+        else if (number == 0){
+            result ="Zero";
+
+        }
+        else
+        {
+            result ="Odd Number";
+        }
 
         return result;
     }

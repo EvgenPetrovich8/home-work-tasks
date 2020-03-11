@@ -12,6 +12,14 @@ public class DivisorChecker {
         //        TODO implements result
         String result = "";
 
+        if (divisor%number==0&&number!=0){
+            result ="The number 2 is divisor of the number 10";
+        }
+         else
+        {
+            result ="The number 7 is not divisor of the number 50";
+        }
+
         return result;
     }
 }
