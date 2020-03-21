@@ -11,8 +11,21 @@ public class MinValueChecker {
     public int getValue(int[] values) {
 
 //        TODO implements result
-        int result = 0;
 
+
+        int[] values1 = values;
+        int min = values1[0];
+
+
+        for (int num:values1
+             )
+        {
+            if (num<min) {
+                min=num;
+            }
+
+        }
+        int result =min;
         return result;
     }
 

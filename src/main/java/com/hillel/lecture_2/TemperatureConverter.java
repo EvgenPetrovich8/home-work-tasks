@@ -7,6 +7,8 @@ import io.qameta.allure.Step;
  */
 public class TemperatureConverter {
 
+    public static final double KELVIN_COEFFICIENT =273.15;
+
     @Step
     public double celsiusToFahrenheit(double celsius) {
 //       TODO implements result Convert Celsius to Fahrenheit
