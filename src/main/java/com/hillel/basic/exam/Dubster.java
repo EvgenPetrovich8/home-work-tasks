@@ -26,6 +26,36 @@ package com.hillel.basic.exam;
 public class Dubster {
 
     public static String songDecoder(String song) {
-        return null;
+
+          String songTrimmed;
+
+          if (song.contains("C")){
+              songTrimmed =song.replaceAll("[^ABC]","").substring(2,5);
+
+
+          }
+         else if (song.contains("R")){
+              songTrimmed =song.replaceAll("[^RL]","").replaceAll("L", " L");
+        }
+              else{
+              songTrimmed =song.replaceAll("\\w","");
+          }
+
+
+
+
+        return songTrimmed;
+
+
+
+
     }
+
+
+
+
+
+
+
+
 }
