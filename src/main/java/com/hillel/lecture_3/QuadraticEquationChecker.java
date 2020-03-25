@@ -13,9 +13,13 @@ public class QuadraticEquationChecker {
 //        TODO implements result
         String result = "";
 
-        double d = (Math.pow(b, 2)-4*a*c);
-        double x1 = (-b+(Math.sqrt(d)))/(2*a);
-        double x2 = (-b-(Math.sqrt(d)))/(2*a);
+        double d=getDiscriminant(a,b,c);
+        double x1=getRoot1QuadricEq(a,b,d);
+        double x2=getRoot2QuadricEq(a,b,d);
+
+
+
+
 
         if (a==0)
         {
@@ -36,7 +40,28 @@ public class QuadraticEquationChecker {
         }
 
 
+
+
         return result;
     }
+
+    public double getDiscriminant(double a, double b, double c){
+
+        return (Math.pow(b, 2)-4*a*c);
+
+    }
+
+    public double getRoot1QuadricEq(double a, double b, double d){
+
+        return (-b+(Math.sqrt(d)))/(2*a);
+
+    }
+
+    public double getRoot2QuadricEq(double a, double b, double d){
+
+        return (-b-(Math.sqrt(d)))/(2*a);
+
+    }
+
 
 }

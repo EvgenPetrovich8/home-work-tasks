@@ -12,8 +12,8 @@ public class MagnitudeChecker {
 //        TODO implements result
         String result = "";
 
-        double moduleB= Math.abs(b);
-        double moduleA= Math.abs(a);
+        double moduleB= getABS(b);
+        double moduleA= getABS(a);
 
         if(moduleA<moduleB){
             result = "The number "+ b + " has the greatest magnitude!";
@@ -27,5 +27,9 @@ public class MagnitudeChecker {
             result = "The number "+ a +" and " +b+ " are equals by magnitude!";
         }
         return result;
+    }
+
+    public double getABS(double input){
+        return Math.abs(input);
     }
 }

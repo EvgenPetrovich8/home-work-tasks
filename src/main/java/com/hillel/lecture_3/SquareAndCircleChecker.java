@@ -15,8 +15,11 @@ public class SquareAndCircleChecker {
 
         double x,y;
 
-        x=Math.sqrt(circleArea/Math.PI);
-        y=Math.sqrt(squareArea);
+        x=getRadiusOfCircle(circleArea,squareArea);
+        y=getSquareSide(squareArea);
+
+//        x=Math.sqrt(circleArea/Math.PI);
+//        y=Math.sqrt(squareArea);
 
 
 
@@ -36,12 +39,8 @@ public class SquareAndCircleChecker {
 
 //        TODO implements result
         String result = "";
-        double x,y;
-
-        x=Math.sqrt(circleArea/Math.PI);
-        y=Math.sqrt(squareArea);
-
-         if (y<=Math.sqrt(2)*x)
+        
+         if (getSquareSide(squareArea)<=Math.sqrt(2)*getRadiusOfCircle(circleArea,squareArea))
         {
             result ="The square is in the circle";
         }
@@ -51,6 +50,18 @@ public class SquareAndCircleChecker {
         }
 
         return result;
+    }
+
+
+
+    public double getRadiusOfCircle(double circleArea, double squareArea){
+
+        return Math.sqrt(circleArea/Math.PI);
+    }
+
+    public double getSquareSide(double squareArea){
+
+        return Math.sqrt(squareArea);
     }
 
 }

@@ -10,17 +10,26 @@ public class BelongsToIntervalChecker {
     @Step
     public String checkNumberInInterval(int from, int to, int number) {
 
-        String result = "";
+        String result = decideBelongsOrNot(from,to,number);
 
-        if (number>=-5&&number<=3)
+
+
+        return result;
+    }
+
+    public String decideBelongsOrNot (int from, int to, int number){
+
+        String answer;
+        if (number>=from&&number<=to)
         {
-            result= "Number "+ number +" belong to interval [-5;3]";
+           answer= "Number "+ number +" belong to interval [-5;3]";
         }
         else
         {
-            result= "Number "+ number +" not belong to interval [-5;3]";
+            answer= "Number "+ number +" not belong to interval [-5;3]";
         }
 
-        return result;
+
+        return answer;
     }
 }
