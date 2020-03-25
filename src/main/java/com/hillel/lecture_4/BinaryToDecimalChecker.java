@@ -12,15 +12,6 @@ public class BinaryToDecimalChecker {
 
 //        TODO implements result
 
-        int binaryArray[];
-       // int resultArray[] = new int[10];
-
-//        String temp = Integer.toString(value);
-//        int[] newCnt = new int[temp.length()];
-//        for (int i = 0; i < temp.length(); i++)
-//        {
-//            newCnt[i] = temp.charAt(i) - '0';
-//        }
 
         int count =0 ;
 
@@ -50,8 +41,7 @@ public class BinaryToDecimalChecker {
 
 //        TODO implements result
         int result = 0;
-//        String  data = String.valueOf(value);
-//        char[] dataDiv = data.toCharArray();
+
        int powCoef  =1;
        int temp = value;
                while (temp>0) {
