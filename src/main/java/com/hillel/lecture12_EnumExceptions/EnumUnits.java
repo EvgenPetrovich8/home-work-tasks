@@ -1,0 +1,6 @@
+package com.hillel.lecture12_EnumExceptions;
+
+public enum EnumUnits {
+
+    KILOMETRES,MILES,METERS,INCHES,CELSIUS,FAHRENHEIT,KELVIN,KILOGRAMS,POUNDS,KM_HOUR,MILES_HOUR
+}
