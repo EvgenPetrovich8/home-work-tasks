@@ -36,9 +36,7 @@ public class WeightConverter  implements IConverter{
 
 
 
-            default:
-                System.out.println("Неподходящий тип конвертора");
-        }
+                    }
 
         return finalValue;
 

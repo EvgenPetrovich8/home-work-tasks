@@ -2,13 +2,20 @@ package com.hillel.lecture12_EnumExceptions;
 
 public class Lecture12Main {
 
-    public static String unitTypeStart="CELSIUS";
-    public static String unitTypeResult="KELVIN";
+    // делал изначально по концепции входной точки как будто пользователь выбирает в интерфейсе программы в двух выпадающих списках
+//     какие единицы в какие он хочет перевести (unitTypeStart и unitTypeResult),а также задаёт величину (startValue).
+//    Твоё замечание по поводу "прятать експешны" понял, но тут они общие (отрицательное числов на вход,например или когда
+// unitTypeStart=unitTypeResult)
 
-    public static void main(String[] args) throws ConverterException{
+    public static String unitTypeStart="KILOGRAMS1";
+    public static String unitTypeResult="POUNDS";
+    public static double startValue=1;
 
-        double startValue=1;
+    public static void main(String[] args) throws ConverterException,ConverterCalculationException{
+
+
         String converterType="DISTANCE";
+        boolean isValidUnit=true;
 
 
         ConvertersFactory factory = new ConvertersFactory();
@@ -20,15 +27,15 @@ public class Lecture12Main {
 
 
 
-
-
-            if (unitTypeStart.equals(unitTypeResult)) {
+//
+           if (unitTypeStart.equals(unitTypeResult)) {
                 throw new ConverterException ("unitTypeStart can not be equals unitTypeResult");
             }
 
-//            if (startValue<0) {
-//                throw new ConverterCalculationException("startValue can not be less than 0");
-//            }
+//           if (EnumUnits.valueOf(unitTypeStart)) {
+//               throw new ConverterCalculationException("startValue can not be less than 0");
+//           }
+
 
 
         if (unitTypeStart.equals("KILOGRAMS")||unitTypeStart.equals("POUNDS")) {
@@ -51,6 +58,8 @@ public class Lecture12Main {
 
             converterType="TEMPERATURE";
         }
+
+
 
 
 
@@ -82,11 +91,11 @@ public class Lecture12Main {
                 System.out.println("Результат конвертации: "+result);
                 break;
 
-            default :
-                System.out.println("Неподходящий тип конвертера");
+
         }
 
-
+       boolean resultA =UnitsValidator.isValidunitTypeStart(unitTypeStart);
+        System.out.println(resultA );
 
         }
 

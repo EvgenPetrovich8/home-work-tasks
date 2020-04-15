@@ -12,6 +12,8 @@ public class DistanceConverter implements IConverter {
 
    String unitTypeStart=Lecture12Main.unitTypeStart;
    String unitTypeResult=Lecture12Main.unitTypeResult;
+   double startValue = Lecture12Main.startValue;
+
 
 
 //    private String unitTypeStart;
@@ -31,7 +33,8 @@ public class DistanceConverter implements IConverter {
 
 
 
-    public String selectType(String unitTypeStart,String unitTypeResult){
+
+    public String selectType(String unitTypeStart,String unitTypeResult) {
 
         if (unitTypeStart.equals("KILOMETRES") && unitTypeResult.equals("MILES")){
             transferType="KILOMETRES_TO_MILES";
@@ -47,9 +50,13 @@ public class DistanceConverter implements IConverter {
         else if (unitTypeStart.equals("INCHES") && unitTypeResult.equals("METERS")){
             transferType="INCHES_TO_METERS";
         }
+         else {
+            transferType="INCORRECT" ;
+        }
 
         return transferType;
     }
+
 
 
     @Override
@@ -84,8 +91,8 @@ public class DistanceConverter implements IConverter {
                 break;
 
 
-            default:
-                System.out.println("Неподходящий тип конвертора");
+
+
         }
 
            return finalValue;

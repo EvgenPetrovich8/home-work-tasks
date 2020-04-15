@@ -2,25 +2,25 @@ package com.hillel.lecture12_EnumExceptions;
 
 public class ConvertersFactory {
 
-    public IConverter getConverter(EnumConverters type) {
-        IConverter toReturn = null;
+    public IConverter getConverter(EnumConverters type) throws ConverterCalculationException{
+        IConverter convReturn = null;
         switch (type) {
             case DISTANCE:
-                toReturn = new DistanceConverter();
+                convReturn = new DistanceConverter();
                 break;
             case SPEED:
-                toReturn = new SpeedConverter();
+                convReturn = new SpeedConverter();
                 break;
             case TEMPERATURE:
-                toReturn = new TemperatureConverter();
+                convReturn = new TemperatureConverter();
                 break;
             case WEIGHT:
-                toReturn = new WeightConverter();
+                convReturn = new WeightConverter();
                 break;
             default:
-                throw new IllegalArgumentException("Wrong doughnut type:" + type);
+                throw new ConverterCalculationException ("INCORRECT TYPE OF CONVERTER:" + type);
         }
-        return toReturn;
+        return convReturn;
     }
 
 
