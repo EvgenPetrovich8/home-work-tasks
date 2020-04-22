@@ -18,37 +18,14 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
-
-
-
-//        String result = "";
-//
-//        String result1 = "";
-//        String result2 = "";
-//        String result3 = "";
-//        String result4 = "";
-//        String result5 = "";
-//        String result6 = "";
-//
-//        int length;
-//
-//        String nStr8=Long.toString(8);
-//        String nStr9=Long.toString(9);
-//
-//        int lengthStr8=nStr8.length();
-//        int lengthStr8=nStr9.length();
-//
-//        if (length==8){
-//
-//        }
-//        else{
-//
-//        }
-
-
-
-
-
-        return 0;
+        String input = String.valueOf(n);
+        for (int i = 0; i < input.length()-1; i++) {
+            input = input.substring(0, i) + input.substring(i + 1) + input.charAt(i);
+            long current = Long.parseLong(input);
+            if (n < current) {
+                n = current;
+            }
+        }
+        return n;
     }
 }

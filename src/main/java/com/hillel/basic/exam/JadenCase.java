@@ -18,35 +18,15 @@ package com.hillel.basic.exam;
 public class JadenCase {
 
     public String toJadenCase(String phrase) {
-
-
-        String result = "";
-        int i = 0;
-        String others;
-        String start;
-
+        String result;
         if (phrase != null && !phrase.isEmpty()) {
-            String[] split = phrase.split(" ");
-            int length = split.length;
-
-            while (i <= length - 1
-            ) {
-                start = split[i].substring(0, 1).toUpperCase();
-                others = split[i].substring(1);
-                result = result + start.concat(others).concat(" ");
-                i++;
-
+            String[] phraseJaden = phrase.split(" ");
+            for (int i = 0; i < phraseJaden.length; i++) {
+                phraseJaden[i] = phraseJaden[i].substring(0, 1).toUpperCase() + phraseJaden[i].substring(1);
             }
-result=result.trim();
-
-
-        } else {
-
-            result = null;
-        }
-
-
+            result = String.join(" ", phraseJaden);
+        } else
+            return null;
         return result;
     }
 }
-
