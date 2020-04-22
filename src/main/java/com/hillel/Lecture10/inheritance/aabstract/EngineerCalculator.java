@@ -1,6 +1,4 @@
-package com.hillel.Lecture10_InheritanceAndAbstractClasses;
-
-import java.math.*;
+package com.hillel.Lecture10.inheritance.aabstract;
 
 public class EngineerCalculator extends Calculators{
 

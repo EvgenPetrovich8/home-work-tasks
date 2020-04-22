@@ -1,4 +1,4 @@
-package com.hillel.Lecture10_InheritanceAndAbstractClasses;
+package com.hillel.Lecture10.inheritance.aabstract;
 
 public abstract class Calculators {
 
